@@ -16,7 +16,8 @@ public class SmarterChild extends Main{
 		info.add(new Information("Name", s.next()));
 	}
 	
-	private ArrayList<Game> getGames(){
-		return new ArrayList<Game>();
+	private ArrayList<String> getGames(){
+		List<String> out = new ArrayList<String>();
+		out.add("TicTacToe")
 	}
 }
