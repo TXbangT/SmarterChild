@@ -1,3 +1,6 @@
 package magpieAssist;
 
-public class
+public class TicTacToe{
+  private int[] info = new int [3][3];
+
+}
