@@ -20,4 +20,11 @@ public class SmarterChild extends Main{
 		List<String> out = new ArrayList<String>();
 		out.add("TicTacToe")
 	}
+	
+	public String respond(String statement)
+	{
+		String response="";
+		if(statement.toUpperCase().indexOf("MY NAME")>=0)
+		response= "Your name is "+Information.getInfo();
+	}
 }
