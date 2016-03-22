@@ -14,6 +14,7 @@ public class SmarterChild extends Main{
 	private void getName(){
 		System.out.println("What is your name?");
 		info.add(new Information("Name", s.next()));
+		System.out.println("Hello" + returnName());
 	}
 	
 	private ArrayList<String> getGames(){
@@ -21,10 +22,10 @@ public class SmarterChild extends Main{
 		out.add("TicTacToe")
 	}
 	
-	public String respond(String statement)
+	public String returnName()
 	{
-		String response="";
-		if(statement.toUpperCase().indexOf("MY NAME")>=0)
-		response= "Your name is "+Information.getInfo();
+		for(Information e:info)
+			if(e.getType().equals("Name"))
+				return e;
 	}
 }
