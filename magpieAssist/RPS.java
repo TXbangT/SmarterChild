@@ -3,41 +3,41 @@ package magpieAssist;
 import java.util.Random;
 
 
-public class RPS {
+public class RPS implements Game{
 	private static Random r = new Random();
 	private static String computerPlay = "";
 	private static String personPlay = "";
+	private String output = "";
 	
-	public static void inputPlay(String play){
-		personPlay = play;
+	public  void move(String move){
+		personPlay = move;
 	}
 	
-	public static String getCompPlay(){
+	public  String computerMove(){
 		return computerPlay;
 	}
 	
-	public static String determineWin(){
-		String out = "";
+	public  void Play(){
     	if(personPlay.compareTo(computerPlay.toUpperCase().substring(0, 1))==0){
-    		System.out.print("It's a tie!");
+    		output = "It's a tie!";
     	}else if(personPlay.equals("S")){
     		if(computerPlay.equals("paper")){
-    			out = "Scisors cuts paper, you win!";
+    			output = "Scisors cuts paper, you win!";
     		}else{
-    			out = "Rock crushes scissors, you lose.";
+    			output = "Rock crushes scissors, you lose.";
     		}
     	}else if(personPlay.equals("P")){
     		if(computerPlay.equals("rock")){
-    			out = "Paper covers rock, you win!";
+    			output = "Paper covers rock, you win!";
     		}else{
-    			out = "Scissors cuts paper, you lose.";
+    			output = "Scissors cuts paper, you lose.";
     		}
     	}else if(computerPlay.equals("scissors")){
-    		out = "Rock crushes scissors, you win!";
+    		output = "Rock crushes scissors, you win!";
     	}else{
-    		out = "Paper covers rock, you lose.";
+    		output = "Paper covers rock, you lose.";
     	}
-		return out;
+		return endGame();
 		
 	}
 	
@@ -45,5 +45,14 @@ public class RPS {
 		String[] possibleCompPlays = new String[] {"rock", "paper", "scissors"};
     	int computerInt = r.nextInt(3);
     	computerPlay = possibleCompPlays[computerInt];
+	}
+	
+	public String getName()
+	{
+	return "Rock Paper Scissors";	
+	}
+	
+	public String endGame(){
+		return output + " Good Game!";
 	}
 }
