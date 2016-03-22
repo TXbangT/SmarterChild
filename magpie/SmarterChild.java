@@ -14,7 +14,12 @@ public class SmarterChild extends Main{
 	private void getName(){
 		System.out.println("What is your name?");
 		info.add(new Information("Name", s.next()));
-		System.out.println("Hello " + returnName()+ "/nI am a smarter child of Magpie.");
+		System.out.println("Hello " + returnName()+", I am a smarter child of Magpie.");
+	}
+	
+	private void getAge(){
+		System.out.println("How old are you?");
+		info.add(new Infomation("Age", s.next()));
 	}
 	
 	private ArrayList<String> getGames(){
@@ -26,6 +31,13 @@ public class SmarterChild extends Main{
 	{
 		for(Information e:info)
 			if(e.getType().equals("Name"))
+				return e;
+	}
+	
+	public String returnAge()
+	{
+		for(Information e: info)
+			if(e.getType.equals("Age"))
 				return e;
 	}
 }
