@@ -17,6 +17,11 @@ public class SmarterChild extends Main{
 		System.out.println("Hello " + returnName()+", I am a smarter child of Magpie.");
 	}
 	
+	private void getAge(){
+		System.out.println("How old are you?");
+		info.add(new Infomation("Age", s.next()));
+	}
+	
 	private ArrayList<String> getGames(){
 		List<String> out = new ArrayList<String>();
 		out.add("TicTacToe")
