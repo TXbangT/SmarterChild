@@ -8,6 +8,7 @@ public class SmarterChild extends Main{
 	private Scanner s = new Scanner(System.in);
 	public SmarterChild(){
 		getName();
+		getBday();
 		getAge();
 		info.add(new Information("Games Known", getGames()));
 	}
@@ -19,8 +20,13 @@ public class SmarterChild extends Main{
 	}
 	
 	private void getAge(){
-		System.out.println("How old are you?");
+		System.out.println("So how old are you?");
 		info.add(new Infomation("Age", s.next()));
+	}
+	
+	private void getBday(){
+		System.out.println("When's your birthday?");
+		info.add(new Information("Bday", s.next()));
 	}
 	
 	private ArrayList<String> getGames(){
@@ -39,6 +45,13 @@ public class SmarterChild extends Main{
 	{
 		for(Information e: info)
 			if(e.getType.equals("Age"))
+				return e;
+	}
+	
+	public String returnBday()
+	{
+		for(Information e: info)
+			if(e.getType.equals("Bday");
 				return e;
 	}
 	
@@ -73,6 +86,8 @@ public class SmarterChild extends Main{
 	        	response= returnName();
 	      	else if (in.toUpperCase().indexOf("MY AGE")>=0)
 	      		response= returnAge();
+	      	else if(in.toUpperCase().indexOf("BIRTHDAY")>=0)
+	      		response= returnBday();
 	        else{
 			response = getRandomResponse();
 		}
