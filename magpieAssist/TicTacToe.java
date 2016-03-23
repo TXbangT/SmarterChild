@@ -13,7 +13,8 @@ public class TicTacToe implements Game{
    * Starts the game
    */
   public void play(){
-  	System.out.println("You are X, Computer is O");
+  	System.out.println("You are X Computer is O Computer makes first move");
+  	computerMove();
   	while(checkWin()==-1()){
   		System.out.println("Input the location of your play (Range is 0-2 inclusive)");
   		System.out.print("X: ");
@@ -22,10 +23,38 @@ public class TicTacToe implements Game{
   		y = s.nextInt();
   		Sysetm.out.println();
   		while(((x<0&&x>2)||(y<0&&y>2))||info[x][y]!=0){
-  		  System.out.print("Invalid play: Please input a different play")
+  		  System.out.print("Invalid play: Please imput a different play");
+  		  x = s.nextInt();
+  		  y = s.nextInt();
   		}
+  		System.out.println(move("X at " + x + " " + y));
+  		System.out.println(computerMove());
   	}
+  	endGame();
   }
+  
+  public String Move(String str){
+    if(str.CharAt(0)=='X'){
+      info[Integer.parseInt(str.substring(5,6))][Integer.parseInt(str.substring(7))] = 1;
+    }else if(str.CharAt(0)=='O'){
+      info[Integer.parseInt(str.substring(5,6))][Integer.parseInt(str.substring(7))] = 2;
+    }
+    return str; 
+  }
+  
+  public String computerMove(){
+    int x = (int)(Math.random()*3);
+    int y = (int)(Math.random()*3);
+    String out = "";
+    while(info[x][y]!=0){
+      x = (int)(Math.random()*3);
+      y = (int)(Math.random()*3);
+    }
+    out = "O at " + x + " " + y;
+    Move(out);
+    return out;
+  }
+  
   public String toString(){
     String out = "";
     for(int i = 0; i<3; i++){
@@ -86,4 +115,5 @@ public class TicTacToe implements Game{
   	  }
   	  return winTile;
   	}
+  	public String endGame(){}/*Pretend that this method returns a value based on how the checkWin method returns*/
   }
