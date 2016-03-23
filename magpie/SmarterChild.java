@@ -8,6 +8,7 @@ public class SmarterChild extends Main{
 	private Scanner s = new Scanner(System.in);
 	public SmarterChild(){
 		getName();
+		getAge();
 		info.add(new Information("Games Known", getGames()));
 	}
 	
