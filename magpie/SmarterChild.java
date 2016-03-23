@@ -68,7 +68,11 @@ public class SmarterChild extends Main{
 			response = flipString(getRandomResponse());
 	        }else if(in.indexOf.lowerCase("let's play a game" >=0){
 	        		
-	        }	
+	        }
+	        else if (in.toUpperCase().indexOf("MY NAME")>=0)
+	        	response= returnName();
+	      	else if (in.toUpperCase().indexOf("MY AGE")>=0)
+	      		response= returnAge();
 	        else{
 			response = getRandomResponse();
 		}
