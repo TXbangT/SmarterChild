@@ -13,6 +13,12 @@ public class SmarterChild extends Main{
 		info.add(new Information("Games Known", getGames()));
 	}
 	
+	private Information searchInfo(String type)
+	{
+		for(int i = 0; i < info.length(); i++)
+		if(type.equals(info.get(i).getType())
+		return info.get(i);
+	}
 	private void getName(){
 		System.out.println("What is your name?");
 		info.add(new Information("Name", s.next()));
@@ -36,23 +42,17 @@ public class SmarterChild extends Main{
 	
 	public String returnName()
 	{
-		for(Information e:info)
-			if(e.getType().equals("Name"))
-				return e.getInfo();
+	return searchInfo("Name").getInfoString();
 	}
 	
 	public String returnAge()
 	{
-		for(Information e: info)
-			if(e.getType.equals("Age"))
-				return e.getInfo();
+	return searchInfo("Age").getInfoString();
 	}
 	
 	public String returnBday()
 	{
-		for(Information e: info)
-			if(e.getType.equals("Bday");
-				return e.getInfo();
+		return searchInfo("Bday").getInfoString();
 	}
 	
 	public String getResponse(String statement)
