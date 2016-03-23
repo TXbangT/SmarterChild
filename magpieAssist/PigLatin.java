@@ -25,7 +25,7 @@ public void translate()
     if(start.indexOf(" ") > 0 && start.indexOf(" ") < start.length())
     {
     word = start.substring(0, start.indexOf(" "));
-    start -= word;
+    start -= (word + " ");
     translated = convertWord(word) + " ";
     }
     else
