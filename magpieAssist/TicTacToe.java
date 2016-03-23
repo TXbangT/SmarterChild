@@ -22,7 +22,7 @@ public class TicTacToe implements Game{
   		y = s.nextInt();
   		Sysetm.out.println();
   		while(((x<0&&x>2)||(y<0&&y>2))||info[x][y]!=0){
-  		  System.out.print("Invalid play: Please imput a different play")
+  		  System.out.print("Invalid play: Please input a different play")
   		}
   	}
   }
