@@ -41,4 +41,35 @@ public class SmarterChild extends Main{
 			if(e.getType.equals("Age"))
 				return e;
 	}
+	
+	public String getResponse(String statement)
+	{
+		in = prepStatement(statement);
+		if(in.equals("say something")){
+			response = "I'm giving up on you";
+		}
+		else if (in.indexOf("no") >= 0)
+		{
+			response = "Why so negative?";
+		}
+		else if (in.indexOf("mother") >= 0
+				|| in.indexOf("father") >= 0
+				|| in.indexOf("sister") >= 0
+				|| in.indexOf("brother") >= 0)
+		{
+			response = "Tell me more about your family.";
+		}else if(in.indexOf("rock")>=0){
+			playRPS("R");
+		}else if(in.indexOf("scissors")>=0){
+			playRPS("S");
+		}else if(in.indexOf("paper")>=0){
+			playRPS("P");
+		}else if(in.indexOf("backwards")>=0||in.indexOf("reverse")>=0){
+			response = flipString(getRandomResponse());
+	    }else{
+			response = getRandomResponse();
+		}
+		prevResponse = response;
+		return response;
+	}
 }
