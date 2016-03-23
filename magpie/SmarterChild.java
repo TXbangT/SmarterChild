@@ -38,21 +38,21 @@ public class SmarterChild extends Main{
 	{
 		for(Information e:info)
 			if(e.getType().equals("Name"))
-				return e;
+				return e.getInfo();
 	}
 	
 	public String returnAge()
 	{
 		for(Information e: info)
 			if(e.getType.equals("Age"))
-				return e;
+				return e.getInfo();
 	}
 	
 	public String returnBday()
 	{
 		for(Information e: info)
 			if(e.getType.equals("Bday");
-				return e;
+				return e.getInfo();
 	}
 	
 	public String getResponse(String statement)
