@@ -20,11 +20,38 @@ public class TicTacToe implements Game{
   		x = s.nextInt();
   		System.out.print("\nY: ");
   		y = s.nextInt();
-  		if(info[x][y]!=0)
+  		Sysetm.out.println();
+  		while(((x<0&&x>2)||(y<0&&y>2))||info[x][y]!=0){
+  		  System.out.print("Invalid play: Please imput a different play")
+  		}
   	}
   }
+  public String toString(){
+    String out = "";
+    for(int i = 0; i<3; i++){
+      for(int j = 0; j<3; j++){
+        out += intToChar(info[i][j]);
+        if(j<2)
+        out += "|"
+      }
+      out += "\n"
+      if(i<2)
+        out+= "-----\n";
+    }
+  }
   
-  
+  /**
+   * Turns a given int to an approate game
+   */
+  private String intToChar(int i){
+    if(i==1){
+      return "X";
+    }else if(i==2){
+      return "O";
+    }else{
+      return " ";
+    }
+  }
   /**
    * @Return -1 if no win; 0 if X win; 1 if O win; 2 if tie;
    */
