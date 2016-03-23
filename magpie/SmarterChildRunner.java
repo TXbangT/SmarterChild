@@ -11,7 +11,7 @@ public class SmarterChildRunner {
     Scanner s= new Scanner(in);
     String statement= s.nextLine();
     
-    while (!statement.toUpperCase().equals("BYE")||(!statement.toUpperCase().equals("GOODBYE")))
+    while (!statement.indexOfIgnoreCase("Bye"))
 		{
 			System.out.println (child.getResponse(statement));
 			statement = in.nextLine();
