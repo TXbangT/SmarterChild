@@ -13,7 +13,7 @@ public class TicTacToe implements Game{
    * Starts the game
    */
   public void play(){
-  	System.out.println("You are X Computer is O");
+  	System.out.println("You are X, Computer is O");
   	while(checkWin()==-1()){
   		System.out.println("Input the location of your play (Range is 0-2 inclusive)");
   		System.out.print("X: ");
