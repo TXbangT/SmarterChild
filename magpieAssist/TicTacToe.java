@@ -15,12 +15,15 @@ public class TicTacToe implements Game{
   public void play(){
   	System.out.println("You are X Computer is O");
   	while(checkWin()==-1()){
-  		System.out.println("Input the location of your play");
+  		System.out.println("Input the location of your play (Range is 0-2 inclusive)");
   		System.out.print("X: ");
-  		s = s.nextInt();
-  		
+  		x = s.nextInt();
+  		System.out.print("\nY: ");
+  		y = s.nextInt();
+  		if(info[x][y]!=0)
   	}
   }
+  
   
   /**
    * @Return -1 if no win; 0 if X win; 1 if O win; 2 if tie;
