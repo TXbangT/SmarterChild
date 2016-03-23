@@ -14,7 +14,7 @@ public class SmarterChild extends Main{
 	private void getName(){
 		System.out.println("What is your name?");
 		info.add(new Information("Name", s.next()));
-		System.out.println("Hello " + returnName()+", I am a smarter child of Magpie.");
+		System.out.println("Hello " + returnName()+", I am a smarter child of Magpie. Let's talk.");
 	}
 	
 	private void getAge(){
