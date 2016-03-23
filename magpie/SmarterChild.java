@@ -66,7 +66,10 @@ public class SmarterChild extends Main{
 			playRPS("P");
 		}else if(in.indexOf("backwards")>=0||in.indexOf("reverse")>=0){
 			response = flipString(getRandomResponse());
-	    }else{
+	        }else if(in.indexOf.lowerCase("let's play a game" >=0){
+	        		
+	        }	
+	        else{
 			response = getRandomResponse();
 		}
 		prevResponse = response;
